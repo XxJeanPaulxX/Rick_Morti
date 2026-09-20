@@ -18,7 +18,7 @@
             android:id="@+id/imgPersonaje"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:contentDescription="Personaje" />
+            android:contentDescription="@string/desc_personaje" />
 
         <LinearLayout
             android:layout_width="0dp"
