@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Rick_Morti</string>
+    <string name="titulo">Rick and Morty - Personajes</string>
+    <string name="anterior">Anterior</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="pagina_inicial">Página 1</string>
+    <string name="pagina_n">Página %1$d</string>
+    <string name="estado_n">Estado: %1$s</string>
+    <string name="especie_n">Especie: %1$s</string>
+    <string name="error_carga">Error al cargar: %1$s</string>
+    <string name="desc_personaje">Personaje</string>
 </resources>

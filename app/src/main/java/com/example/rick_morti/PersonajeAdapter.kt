@@ -27,8 +27,8 @@ class PersonajeAdapter(private var lista: List<Personaje>) :
     override fun onBindViewHolder(holder: PersonajeViewHolder, position: Int) {
         val personaje = lista[position]
         holder.nombre.text = personaje.name
-        holder.estado.text = "Estado: ${personaje.status}"
-        holder.especie.text = "Especie: ${personaje.species}"
+        holder.estado.text = holder.itemView.context.getString(R.string.estado_n, personaje.status)
+        holder.especie.text = holder.itemView.context.getString(R.string.especie_n, personaje.species)
         Glide.with(holder.itemView.context)
             .load(personaje.image)
             .into(holder.img)

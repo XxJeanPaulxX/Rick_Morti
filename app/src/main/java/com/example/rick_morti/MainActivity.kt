@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 progressBar.visibility = View.GONE
                 adapter.actualizarLista(response.results)
-                textPagina.text = "Página $pagina"
+                textPagina.text = getString(R.string.pagina_n, pagina)
 
                 tieneAnterior = response.info.prev != null
                 tieneSiguiente = response.info.next != null
@@ -90,14 +90,13 @@ class MainActivity : AppCompatActivity() {
                 Log.e("RM_DEBUG", "Error al consumir la API", e)
                 Toast.makeText(
                     this@MainActivity,
-                    "Error al cargar: ${e.localizedMessage}",
+                    getString(R.string.error_carga, e.localizedMessage),
                     Toast.LENGTH_LONG
                 ).show()
             }
         }
     }
 
-    // Dos animaciones consecutivas de 5 segundos cada una
     private fun animarCarga() {
         recyclerView.alpha = 0f
         val fadeIn = ObjectAnimator.ofFloat(recyclerView, "alpha", 0f, 1f)
